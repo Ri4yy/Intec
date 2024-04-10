@@ -1,0 +1,22 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-align: center;
+    width: fit-content;
+
+    @media(max-width: $breakpoint480) {
+        font-size: 14px;
+    }
+
+    &--about {
+        padding: 12px 16px;
+        margin-block-start: auto;
+        margin-left: auto;
+    }
+}

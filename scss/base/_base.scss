@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'Gilroy'; 
+	src: url(../fonts/Gilroy-Bold.ttf); 
+}
+@font-face {
+	font-family: 'Gilroy'; 
+	src: url(../fonts/Gilroy-SemiBold.ttf); 
+}
+@font-face {
+	font-family: 'Gilroy'; 
+	src: url(../fonts/Gilroy-Medium.ttf); 
+}
+@font-face {
+	font-family: 'Gilroy'; 
+	src: url(../fonts/Gilroy-Regular.ttf); 
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: $font-family;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    max-width: 1596px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1628px) {
+        padding: 0 16px !important;
+    }
+}
+.title-h2 {
+    font-weight: 700;
+    font-size: 58px;
+    color: $secondary-color;
+    width: fit-content;
+
+    &--white {
+        color: #fff;
+    }
+
+    @media(max-width: $breakpoint1440) {
+        font-size: 32px;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 24px;
+    }
+}
+.title-h3 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff;
+    width: fit-content;
+
+    @media(max-width: $breakpoint600) {
+        font-size: 28px;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 24px;
+    }
+}
+.section {
+    position: relative;
+    margin-top: 160px;
+
+    @media(max-width: $breakpoint1024) {
+        margin-top: 120px;
+    }
+    @media(max-width: $breakpoint768) {
+        margin-top: 80px;
+    }
+    @media(max-width: $breakpoint480) {
+        margin-top: 60px;
+    }
+}
+.no-scroll {
+    overflow: hidden;
+}

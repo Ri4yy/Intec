@@ -1,0 +1,52 @@
+.hero {
+    background-image: url('../img/hero.png');
+    background-size: cover;
+    background-position: 50%;
+    max-height: 100dvh;
+    aspect-ratio: 1920/1000;
+
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        margin: auto;
+    }
+    &__description {
+        margin: auto 0;
+        max-width: 740px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 80px;
+        color: #fff;
+    }
+    &__text {
+        margin-top: 24px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.5;
+        color: #fff;
+    }
+}
+
+.line {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 78px;
+    left: 0;
+
+    &__item {
+        height: 8px;
+        background: #fff;
+        border-radius: 35px;
+
+        &:nth-of-type(1) {
+            width: 100px;
+        }
+        &:nth-of-type(2), &:nth-of-type(3) {
+            width: 40px;
+        }
+    }
+}

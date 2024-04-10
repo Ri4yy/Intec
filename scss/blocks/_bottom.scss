@@ -1,0 +1,14 @@
+.bottom-wrapper {
+    padding: 160px 0 66px 0;
+    background: $secondary-color;
+
+    @media(max-width: $breakpoint1024) {
+        margin-top: 120px;
+    }
+    @media(max-width: $breakpoint768) {
+        margin-top: 80px;
+    }
+    @media(max-width: $breakpoint480) {
+        margin-top: 60px;
+    }
+}
