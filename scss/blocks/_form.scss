@@ -5,11 +5,26 @@
     background-size: cover;
     background-position: 50%;
 
+    @media(max-width: $breakpoint600) {
+        padding: 50px 20px;
+    }
+
     &__title {
         font-weight: 700;
         font-size: 58px;
         color: #fff;
         max-width: 920px;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 48px;
+        }
+        @media(max-width: $breakpoint600) {
+            font-size: 32px;
+        }
+        @media(max-width: $breakpoint600) {
+            font-size: 24px;
+            text-align: center;
+        }
     }
     &__subtitle {
         margin-top: 28px;
@@ -18,6 +33,17 @@
         line-height: 1.5;
         color: #fff;
         max-width: 490px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 20px;
+        }
+        @media(max-width: $breakpoint600) {
+            font-size: 14px;
+            text-align: center;
+            max-width: 280px;
+            margin: 14px auto 0;
+            line-height: 1;
+        }
     }
 }
 
@@ -27,9 +53,19 @@
     &__top {
         display: flex;
         gap: 20px;
+        flex-wrap: wrap;
+
+        @media(max-width: $breakpoint600) {
+            gap: 16px;
+        }
     }
     &__bottom {
         margin-top: 20px;
+
+        @media(max-width: $breakpoint600) {
+            max-width: 200px;
+            margin: 20px auto 0;
+        }
 
         & label {
             display: flex;
@@ -41,6 +77,10 @@
                 font-size: 16px;
                 line-height: 1.5;
                 color: #fff;
+
+                @media(max-width: $breakpoint600) {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -53,14 +93,29 @@
     color: #fff;
     min-width: 320px;
 
+    @media(max-width: $breakpoint768) {
+        width: 100%;
+    }
+    @media(max-width: $breakpoint600) {
+        padding: 12px;
+    }
+    @media(max-width: $breakpoint480) {
+        min-width: unset;
+    }
+
     &--dark {
         border: 1px solid $secondary-color;
         color: $secondary-color;
+        width: 100%;
 
         &::placeholder {
             font-weight: 500;
             font-size: 18px;
-            color: $secondary-color;
+            color: $secondary-color !important;
+
+            @media(max-width: $breakpoint600) {
+                font-size: 13px;
+            }
         }
     }
 
@@ -82,10 +137,18 @@
     font-size: 18px;
     color: #333;
 
+    @media(max-width: $breakpoint600) {
+        font-size: 14px;
+    }
+
     &--white {
         background: #fff;
         color: $secondary-color;
         max-width: 240px;
+
+        @media(max-width: $breakpoint600) {
+            max-width: unset;
+        }
     }
     &--blue {
         background: #0094DD;

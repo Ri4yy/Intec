@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./libs/swiper-bundle.min.css">
 </head>
 <body>
     <header class="hero">
+        <div class="overlay"></div>
         <div class="container">
             <div class="header">
                 <a href="#"><img src="/img/logo.svg" alt=""></a>
-                <nav>
+                <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-list__item">
-                            <a href="" class="nav-list__link">О компании</a>
+                            <a href="" class="nav-list__link link-hover">О компании</a>
                         </li>
                         <li class="nav-list__item">
-                            <a href="" class="nav-list__link">Карьера</a>
+                            <a href="" class="nav-list__link link-hover">Карьера</a>
                         </li>
                         <li class="nav-list__item">
-                            <a href="" class="nav-list__link">Сотрудничество</a>
+                            <a href="" class="nav-list__link link-hover">Сотрудничество</a>
                         </li>
                     </ul>
                 </nav>
+                <button class="menu" id="openMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
         <div class="container hero__wrapper">
@@ -46,31 +53,31 @@
             <div class="container">
                 <h2 class="title-h2">О компании</h2>
                 <div class="b-about">
-                        <div class="b-about__item b-about__item--left">
-                            <h3 class="title-h3">Многоэтажное строительство</h3>
-                            <p class="b-about__text">Наша бригада не только возводит строения, мы создаем великолепные архитектурные ансамбли, где каждая деталь пропитана заботой о комфорте и удобстве будущих обитателей. Мы верим, что каждый проект — это уникальная возможность воплотить самые смелые идеи, сочетая их с современными стандартами и потребностями наших клиентов. Наша цель - не просто построить дома, а создать пространства, которые станут истинным воплощением мечтаний о современном и комфортном образе жизни.</p>
-                            <a href="" class="btn btn--about">новыйгород21.рф</a>
-                        </div>
-                        <div class="b-about__item b-about__item--top">
-                            <h3 class="title-h3">Металлообработка и подъемное оборудование</h3>
-                            <p class="b-about__text">Мы производим подъемное оборудование для инвалидов, автомобильные подъемники, а также подъемное оборудование для склада, специализируемся на предоставлении широкого спектра услуг по металлообработке и обслуживанию и производству подъемного оборудования. Наш опыт и высокие стандарты качества позволяют нам решать самые сложные задачи нашим клиентам. От точной металлорезки до качественного сварного соединения, мы обеспечиваем результат, который соответствует самым высоким стандартам.</p>
-                            <a href="" class="btn btn--about">инвалидные-подъемники.рф</a>
-                        </div>
-                        <div class="b-about__item b-about__item--bottom">
-                            <h3 class="title-h3">Деревянное домостроение</h3>
-                            <p class="b-about__text">С 1991 года мы с увлечением развиваемся в области деревообработки, черпая опыт у финских лидеров в строительстве домов. Наш собственный завод по переработке древесины оснащен передовым оборудованием, что позволяет нам производить детали с высочайшей точностью и экономить время и ресурсы нашим клиентам. Мы гарантируем качество нашей продукции, подтвержденное всеми необходимыми сертификатами, и приглашаем вас посетить наше производство, чтобы убедиться в высоком стандарте нашего клееного бруса, который соответствует всем требованиям ГОСТ.</p>
-                            <a href="" class="btn btn--about">incost-dom.ru</a>
-                        </div>
-                        <div class="b-about__item b-about__item--window">
-                            <h3 class="title-h3">Деревянные евроокна</h3>
-                            <p class="b-about__text">30 лет наше предприятие дарит тепло и уют вашим домам, изготавливая лучшие окна из дерева. “Инкост" производит деревянные окна с 1991 года. Главной целью нашей компании является производство деревянных оконных конструкций высокого качества и любой сложности. Мы готовы предложить нашим клиентам продукцию различной сложности и конфигурации, от бюджетного «эконом» класса до элитных конструкций, в любых количествах и объемах.</p>
-                            <a href="" class="btn btn--about">incost-okna.ru</a>
-                        </div>
-                        <div class="b-about__item b-about__item--rbu">
-                            <h3 class="title-h3">РБУ (растворо-бетонный узел)</h3>
-                            <p class="b-about__text">В Новом городе в городе Чебоксары, мы - ведущий застройщик, специализирующийся на качественном строительстве кирпичных домов с индивидуальной и автономной системой отопления. Наша компания активно производит бетон в двух разных районах города: на СЗР и на Марпосадском шоссе. Мы гордимся нашей сертифицированной собственной лабораторией качества, которая обеспечивает высочайший уровень стандартов в нашей продукции.</p>
-                            <a href="" class="btn btn--about">incost-okna.ru</a>
-                        </div>
+                    <div class="b-about__item b-about__item--left">
+                        <h3 class="title-h3">Многоэтажное строительство</h3>
+                        <p class="b-about__text">Наша бригада не только возводит строения, мы создаем великолепные архитектурные ансамбли, где каждая деталь пропитана заботой о комфорте и удобстве будущих обитателей. Мы верим, что каждый проект — это уникальная возможность воплотить самые смелые идеи, сочетая их с современными стандартами и потребностями наших клиентов. Наша цель - не просто построить дома, а создать пространства, которые станут истинным воплощением мечтаний о современном и комфортном образе жизни.</p>
+                        <a href="" class="btn btn--about btn-hover btn-hover--white">новыйгород21.рф</a>
+                    </div>
+                    <div class="b-about__item b-about__item--top">
+                        <h3 class="title-h3">Металлообработка и подъемное оборудование</h3>
+                        <p class="b-about__text">Мы производим подъемное оборудование для инвалидов, автомобильные подъемники, а также подъемное оборудование для склада, специализируемся на предоставлении широкого спектра услуг по металлообработке и обслуживанию и производству подъемного оборудования. Наш опыт и высокие стандарты качества позволяют нам решать самые сложные задачи нашим клиентам. От точной металлорезки до качественного сварного соединения, мы обеспечиваем результат, который соответствует самым высоким стандартам.</p>
+                        <a href="" class="btn btn--about btn-hover btn-hover--white">инвалидные-подъемники.рф</a>
+                    </div>
+                    <div class="b-about__item b-about__item--bottom">
+                        <h3 class="title-h3">Деревянное домостроение</h3>
+                        <p class="b-about__text">С 1991 года мы с увлечением развиваемся в области деревообработки, черпая опыт у финских лидеров в строительстве домов. Наш собственный завод по переработке древесины оснащен передовым оборудованием, что позволяет нам производить детали с высочайшей точностью и экономить время и ресурсы нашим клиентам. Мы гарантируем качество нашей продукции, подтвержденное всеми необходимыми сертификатами, и приглашаем вас посетить наше производство, чтобы убедиться в высоком стандарте нашего клееного бруса, который соответствует всем требованиям ГОСТ.</p>
+                        <a href="" class="btn btn--about btn-hover btn-hover--white">incost-dom.ru</a>
+                    </div>
+                    <div class="b-about__item b-about__item--window">
+                        <h3 class="title-h3">Деревянные евроокна</h3>
+                        <p class="b-about__text">30 лет наше предприятие дарит тепло и уют вашим домам, изготавливая лучшие окна из дерева. “Инкост" производит деревянные окна с 1991 года. Главной целью нашей компании является производство деревянных оконных конструкций высокого качества и любой сложности. Мы готовы предложить нашим клиентам продукцию различной сложности и конфигурации, от бюджетного «эконом» класса до элитных конструкций, в любых количествах и объемах.</p>
+                        <a href="" class="btn btn--about btn-hover btn-hover--white">incost-okna.ru</a>
+                    </div>
+                    <div class="b-about__item b-about__item--rbu">
+                        <h3 class="title-h3">РБУ (растворо-бетонный узел)</h3>
+                        <p class="b-about__text">В Новом городе в городе Чебоксары, мы - ведущий застройщик, специализирующийся на качественном строительстве кирпичных домов с индивидуальной и автономной системой отопления. Наша компания активно производит бетон в двух разных районах города: на СЗР и на Марпосадском шоссе. Мы гордимся нашей сертифицированной собственной лабораторией качества, которая обеспечивает высочайший уровень стандартов в нашей продукции.</p>
+                        <a href="" class="btn btn--about btn-hover btn-hover--white">incost-okna.ru</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -90,25 +97,152 @@
         <section class="section">
             <div class="bottom-wrapper">
                 <div class="b-career">
-
-                </div>
-                <div class="container">
-                    <div class="b-form">
-                        <h3 class="b-form__title">Приглашаем к сотрудничеству поставщиков</h3>
-                        <p class="b-form__subtitle">Оставьте контактные данные и наши менеджеры свяжутся с вами</p>
-                        <form action="#" method="POST" class="main-form">
-                            <div class="main-form__top">
-                                <input type="text" class="input" placeholder="Ваше имя">
-                                <input type="text" class="input" placeholder="Ваш телефон">
-                                <button type="submit" class="form-btn form-btn--white">Отправить</button>
+                    <h2 class="title-h2 title-h2--white">Карьера</h2>
+                    <div class="swiper swiper-career">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide b-career__slide">
+                                <div class="b-career__item b-career__item--noskill">
+                                    <h3 class="title-h3">Без требований к образованию, знаниям и профессиональным навыкам</h3>
+                                    <div class="b-career__description">
+                                        <ul class="career-list">
+                                            <li class="career-list__item"><p>- Станочников деревообрабатывающих станков</p></li>
+                                            <li class="career-list__item"><p>- Каменщиков</p></li>
+                                            <li class="career-list__item"><p>- Бетонщиков</p></li>
+                                            <li class="career-list__item"><p>- Штукатуров-маляров</p></li>
+                                            <li class="career-list__item"><p>- Грузчиков</p></li>
+                                            <li class="career-list__item"><p>- Разнорабочих</p></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn--career btn-hover btn-hover--white open-modal">Откликнуться</button>
+                                </div>
                             </div>
-                            <div class="main-form__bottom">
-                                <label>
-                                    <input type="checkbox"><span>Я даю согласие на обработку персональных данных</span>
-                                </label>
+                            <div class="swiper-slide b-career__slide">
+                                <div class="b-career__item b-career__item--engineer">
+                                    <h3 class="title-h3">Инженер-конструктор</h3>
+                                    <div class="b-career__description">
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Образование, специальность:</p></li>
+                                            <li class="career-list__item"><p>- Высшее техническое</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Необходимые знания:</p></li>
+                                            <li class="career-list__item"><p>- Знание программы Компас 3D</p></li>
+                                            <li class="career-list__item"><p>- Обучение, повышение квалификации</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Профессиональные навыки:</p></li>
+                                            <li class="career-list__item"><p>- Разработка чертежей</p></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn--career btn-hover btn-hover--white open-modal">Откликнуться</button>
+                                </div>
                             </div>
-                        </form>
+                            <div class="swiper-slide b-career__slide">
+                                <div class="b-career__item b-career__item--auto">
+                                    <h3 class="title-h3">Инженер-программист отдела автоматизации</h3>
+                                    <div class="b-career__description">
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Образование, специальность:</p></li>
+                                            <li class="career-list__item"><p>- Высшее техническое образование</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Необходимые знания:</p></li>
+                                            <li class="career-list__item"><p>- Знание и умение администрировать основные операционные системы и протоколы связи: Windows</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Профессиональные навыки:</p></li>
+                                            <li class="career-list__item"><p>- Обслуживание мелкий ремонт ПК и периферийного оборудования; разовые заправки</p></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn--career btn-hover btn-hover--white open-modal">Откликнуться</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide b-career__slide">
+                                <div class="b-career__item b-career__item--repair">
+                                    <h3 class="title-h3">Слесарь по ремонту и обслуживанию систем вентиляции и кондиционирования</h3>
+                                    <div class="b-career__description">
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Образование, специальность:</p></li>
+                                            <li class="career-list__item"><p>- Среднее профессиональное</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Необходимые знания:</p></li>
+                                            <li class="career-list__item"><p>- Владение необходимыми инструментами</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Профессиональные навыки:</p></li>
+                                            <li class="career-list__item"><p>- Обслуживание систем вентиляции и кондиционирования в цехах</p></li>
+                                            <li class="career-list__item"><p>- Ликвидация неисправностей</p></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn--career btn-hover btn-hover--white open-modal">Откликнуться</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide b-career__slide">
+                                <div class="b-career__item b-career__item--specialist">
+                                    <h3 class="title-h3">Специалисты отдела капитального строительства</h3>
+                                    <div class="b-career__description">
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Образование, специальность:</p></li>
+                                            <li class="career-list__item"><p>- Высшее строительное образование</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Необходимые знания:</p></li>
+                                            <li class="career-list__item"><p>- Знание строительных норм и правил</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Профессиональные навыки:</p></li>
+                                            <li class="career-list__item"><p>- Осуществление технического надзора и контроль качества выполнения строительно-монтажных работ</p></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn--career btn-hover btn-hover--white open-modal">Откликнуться</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide b-career__slide">
+                                <div class="b-career__item b-career__item--driver">
+                                    <h3 class="title-h3">Водитель автомобиля</h3>
+                                    <div class="b-career__description">
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Образование, специальность:</p></li>
+                                            <li class="career-list__item"><p>- Наличие водительского удостоверения, среднее специальное</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Необходимые знания:</p></li>
+                                            <li class="career-list__item"><p>- Устройство автомобиля</p></li>
+                                            <li class="career-list__item"><p>- Основы безопасного движения</p></li>
+                                        </ul>
+                                        <ul class="career-list">
+                                            <li class="career-list__item career-list__item--title"><p>Профессиональные навыки:</p></li>
+                                            <li class="career-list__item"><p>- Умение управлять транспортным средством в различных условиях дорожного движения</p></li>
+                                            <li class="career-list__item"><p>- Знание технических характеристик автомобиля</p></li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn btn--career btn-hover btn-hover--white open-modal">Откликнуться</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="b-form">
+                    <h3 class="b-form__title">Приглашаем к сотрудничеству поставщиков</h3>
+                    <p class="b-form__subtitle">Оставьте контактные данные и наши менеджеры свяжутся с вами</p>
+                    <form action="#" method="POST" class="main-form">
+                        <div class="main-form__top">
+                            <input type="text" class="input" placeholder="Ваше имя">
+                            <input type="text" class="input" placeholder="Ваш телефон">
+                            <button type="submit" class="form-btn form-btn--white">Отправить</button>
+                        </div>
+                        <div class="main-form__bottom">
+                            <label>
+                                <input type="checkbox"><span>Я даю согласие на обработку персональных данных</span>
+                            </label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -122,13 +256,16 @@
                 </div>
                 <ul class="footer-list">
                     <li class="footer-list__item">
-                        <a href="" class="footer-list__link">О компании</a>
+                        <a href="" class="footer-list__link link-hover">О компании</a>
                     </li>
                     <li class="footer-list__item">
-                        <a href="" class="footer-list__link">Карьера</a>
+                        <a href="" class="footer-list__link link-hover">Карьера</a>
                     </li>
                     <li class="footer-list__item">
-                        <a href="" class="footer-list__link">Сотрудничество</a>
+                        <a href="" class="footer-list__link link-hover">Сотрудничество</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="tel:88352640333" class="footer-list__link footer-list__link--blue">8 (8352) 640-333</a>
                     </li>
                     <li class="footer-list__item">
                         <a href="mailto:info@incost.su" class="footer-list__link footer-list__link--blue">info@incost.su</a>
@@ -140,5 +277,31 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="modal-form">
+        <div class="modal__wrapper">
+            <div class="modal__body">
+                <button class="modal__close"><img src="/img//close.svg" alt=""></button>
+                <div class="modal__form">
+                    <h2 class="title-h2 title-h2--black modal__title">Присоединяйтесь к нашей команде!</h2>
+                    <form action="" class="modal-form">
+                        <input type="text" class="input input--dark" placeholder="Ваше имя">
+                        <input type="tel" class="input input--dark" placeholder="Ваш телефон">
+                        <button type="submit" class="form-btn form-btn--blue">Отправить</button>
+                        <div class="modal-form__bottom">
+                            <label>
+                                <input type="checkbox"><span>Я даю согласие на обработку персональных данных</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <img src="/img/logo2.png" class="modal__img" alt="">
+            </div>
+        </div>
+    </div>
+
+<script src="/libs/jquery.min.js"></script>
+<script src="/libs/swiper-bundle.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/slider.js"></script>
 </body>
 </html>
